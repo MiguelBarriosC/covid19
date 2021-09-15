@@ -1,0 +1,32 @@
+<div class="container">
+    <form [formGroup]="soliForm">
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese el titulo</mat-label>
+          <input matInput placeholder="Ejemplo..." formControlName="title" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese el tipo</mat-label>
+            <input matInput placeholder="Programada" formControlName="type" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Estado</mat-label>
+            <input matInput placeholder="Realizado" formControlName="estado" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Numero de infectados</mat-label>
+            <input type="number" matInput placeholder="Numero de infectados" formControlName="nInfectados" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha Creacion</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="fechaCreacion" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha Evento</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="fechaEvento" required>
+        </mat-form-field>
+    </form>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>  
+        <button mat-raised-button color="primary" (click)="create()" [disabled]="!soliForm.valid">Añadir</button>
+    </div>
+</div>

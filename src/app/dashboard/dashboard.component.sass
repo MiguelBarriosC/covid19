@@ -1,0 +1,91 @@
+@import "../shared/colors"
+
+@mixin iconConf($width,$size,$color,$fWeight)
+    width: $width
+    font-size: $size
+    color: $color
+    font-weight: $fWeight
+
+.main-content-item
+    @media (min-width:700px)
+        display: none
+    width: 100%
+    height: auto
+    background: $background-transparent-white
+    border-radius: 15px
+    margin-bottom: 30px
+    &:nth-of-type(3n)
+        .icon
+            border-bottom: 4px solid $purple-icons
+            .mat-icon
+                color: $purple-icons
+        .mat-icon
+            color: $purple-icons
+        h6
+            color: $purple-icons 
+    .icon
+        height:25%
+        display: block
+        text-align: center
+        border-bottom:4px solid $icons-text
+        margin-bottom: 5px
+        .mat-icon
+            @include iconConf(100%,100px,$icons-text,bold)
+    .row
+        border-bottom: 1px solid $background-transparent-white
+    h6
+        color:$icons-text
+        margin:0px
+        font-size:15px
+    .item-row-content
+        color: white
+    .mat-icon
+        font-size:38px
+        color:$icons-text
+mat-grid-list
+    @media (max-width:699px)
+        display: none
+    background: $background-transparent-white
+    border-radius: 15px
+    margin-bottom: 30px
+    &:nth-of-type(3n)
+        .icon
+            .mat-icon
+                color: $purple-icons
+        .mat-icon
+            color: $purple-icons
+        h6
+            color: $purple-icons
+        mat-grid-tile
+            &:nth-child(1)
+                border-right: 4px solid $purple-icons
+    .icon
+        display: block
+        text-align: center
+        .mat-icon
+            @include iconConf(100%,70px,$icons-text,bold)
+    h6
+        color:$icons-text
+        margin: 0px
+        font-size: 15px
+    .item-row-content
+        color: white
+    .mat-icon
+        font-size:38px
+        color:$icons-text
+    mat-grid-tile
+        border-bottom: 1px solid $background-transparent-white
+        border-left: 1px solid $background-transparent-white
+        &:nth-child(1)
+            border-left: 0px
+            border-bottom: 0px
+            border-right: 4px solid $icons-text
+        &:nth-child(6)
+            border-bottom: 0px
+        &:nth-child(7)
+            border-bottom: 0px
+        &:nth-child(2n)
+            border-left: 0px
+
+
+

@@ -1,0 +1,18 @@
+<div mat-dialog-content class="loginDialogContent">
+    <form [formGroup]="loginForm">
+        <mat-form-field appearance="fill">
+          <mat-label>Ingrese su correo</mat-label>
+          <input matInput placeholder="pat@example.com" formControlName="email" required>
+          <mat-error *ngIf="email.hasError('email')">Email invalido</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese su contraseña</mat-label>
+            <input type="password" matInput placeholder="*********" formControlName="pass" required>
+            <mat-error *ngIf="email.errors?.required"></mat-error>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>  
+    <button mat-raised-button color="primary" [disabled]="!loginForm.valid" (click)="login()">Entrar</button>
+</div>

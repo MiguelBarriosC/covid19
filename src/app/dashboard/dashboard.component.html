@@ -1,0 +1,158 @@
+<div class="main-content-item" *ngFor="let element of solicitudes">
+    <div class="icon">
+        <h6>Covid 19</h6>
+        <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">coronavirus</mat-icon>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 align-self-center">
+                <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">subtitles</mat-icon>
+            </div>
+            <div class="col-10">
+                <h6>Titulo de campaña</h6>
+                <strong class="item-row-content">{{ element.title }}</strong>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 align-self-center">
+                <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
+            </div>
+            <div class="col-10">
+                <h6>Tipo de la campaña</h6>
+                <strong class="item-row-content">{{ element.type }}</strong>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 align-self-center">
+                <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">campaign</mat-icon>
+            </div>
+            <div class="col-10">
+                <h6>Estado De campaña</h6>
+                <strong class="item-row-content">{{ element.estado }}</strong>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 align-self-center">
+                <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">groups</mat-icon>
+            </div>
+            <div class="col-10">
+                <h6>Numero de infectados</h6>
+                <strong class="item-row-content">{{ element.nInfectados }}</strong>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 align-self-center">
+                <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">event</mat-icon>
+            </div>
+            <div class="col-10">
+                <h6>Fecha y hora De creacion</h6>
+                <strong class="item-row-content">{{ element.fechaCreacion }}</strong>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 align-self-center">
+                <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">event</mat-icon>
+            </div>
+            <div class="col-10">
+                <h6>Fecha y hora De evento</h6>
+                <strong class="item-row-content">{{ element.fechaEvento }}</strong>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-grid-list cols="5" rowHeight="50px" *ngFor="let element of solicitudes">
+    <mat-grid-tile colspan ="1" rowspan ="3">
+        <div class="icon">
+            <h6>Covid 19</h6>
+            <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">coronavirus</mat-icon>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan ="2" rowspan ="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 align-self-center">
+                    <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">subtitles</mat-icon>
+                </div>
+                <div class="col-10">
+                    <h6>Titulo de campaña</h6>
+                    <strong class="item-row-content">{{ element.title }}</strong>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan ="2" rowspan ="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 align-self-center">
+                    <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">star_outline</mat-icon>
+                </div>
+                <div class="col-10">
+                    <h6>Tipo de la campaña</h6>
+                    <strong class="item-row-content">{{ element.type }}</strong>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan ="2" rowspan ="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 align-self-center">
+                    <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">campaign</mat-icon>
+                </div>
+                <div class="col-10">
+                    <h6>Estado De campaña</h6>
+                    <strong class="item-row-content">{{ element.estado }}</strong>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan ="2" rowspan ="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 align-self-center">
+                    <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">groups</mat-icon>
+                </div>
+                <div class="col-10">
+                    <h6>Numero de infectados</h6>
+                    <strong class="item-row-content">{{ element.nInfectados }}</strong>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan ="2" rowspan ="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 align-self-center">
+                    <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">event</mat-icon>
+                </div>
+                <div class="col-10">
+                    <h6>Fecha y hora De creacion</h6>
+                    <strong class="item-row-content">{{ element.fechaCreacion }}</strong>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan ="2" rowspan ="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 align-self-center">
+                    <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">event</mat-icon>
+                </div>
+                <div class="col-10">
+                    <h6>Fecha y hora De evento</h6>
+                    <strong class="item-row-content">{{ element.fechaEvento }}</strong>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

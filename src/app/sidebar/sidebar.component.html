@@ -1,0 +1,34 @@
+<mat-toolbar class="tool-bar">
+    <button mat-icon-button class="tool-bar-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span><h3>{{ route }}</h3></span>
+</mat-toolbar>
+<!--Sidebar desktop -->
+<mat-list class="normal-mat-list" role="list">
+    <mat-list-item role="listitem" routerLink="/dashboard" routerLinkActive="active"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">moving</mat-icon>Dashboard</mat-list-item>
+    <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">campaign</mat-icon>Campaña</mat-list-item>
+    <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">people</mat-icon>pacientes</mat-list-item>
+    <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">book_online</mat-icon>Programas</mat-list-item>
+    <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">share_location</mat-icon>Monitoreo</mat-list-item>
+    <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">analytics</mat-icon>Reportes y estadisticas</mat-list-item>
+    <mat-list-item role="listitem" routerLink="/solicitudes" routerLinkActive="active"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">view_list</mat-icon>Solicitudes</mat-list-item>
+    <mat-list-item role="listitem" (click)="logout()"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">logout</mat-icon>Logout</mat-list-item>
+</mat-list>
+<mat-drawer-container class="content" [hasBackdrop]="config.hasBackdrop">
+    <!--Sidebar movil -->
+    <mat-drawer #drawer [mode]="config.mode">
+        <mat-list role="list">
+            <mat-list-item role="listitem" routerLink="/dashboard" routerLinkActive="active"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">moving</mat-icon>Dashboard</mat-list-item>
+            <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">campaign</mat-icon>Campaña</mat-list-item>
+            <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">people</mat-icon>pacientes</mat-list-item>
+            <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">book_online</mat-icon>Programas</mat-list-item>
+            <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">share_location</mat-icon>Monitoreo</mat-list-item>
+            <mat-list-item role="listitem"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">analytics</mat-icon>Reportes y estadisticas</mat-list-item>
+            <mat-list-item role="listitem" (click)="logout()"><mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon">logout</mat-icon>Logout</mat-list-item>
+          </mat-list>
+    </mat-drawer>
+    <mat-drawer-content> 
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,46 @@
+<div class="solicitudes-content">
+    <mat-icon  class="mat-icon" aria-hidden="false" aria-label="Example home icon" (click)="openCreateDialog()" role="button">add_circle_outline</mat-icon>
+    <table mat-table [dataSource]="solicitudes" class="mat-elevation-z8">
+        <!-- Title Column -->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef> Titulo </th>
+          <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+        </ng-container>
+        <!-- Tipo Column -->
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef> Tipo </th>
+          <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+        <!-- Tipo Column -->
+        <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef> Estado </th>
+            <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+          </ng-container>
+        <!-- nInfectados Column -->
+        <ng-container matColumnDef="nInfectados">
+          <th mat-header-cell *matHeaderCellDef> Numero Infectados </th>
+          <td mat-cell *matCellDef="let element"> {{element.nInfectados}} </td>
+        </ng-container>
+      
+        <!-- FechaCreacion column -->
+        <ng-container matColumnDef="fechaCreacion">
+          <th mat-header-cell *matHeaderCellDef> Fecha Creacion </th>
+          <td mat-cell *matCellDef="let element"> {{element.fechaCreacion}} </td>
+        </ng-container>
+        <!-- FechaEvento Column -->
+        <ng-container matColumnDef="fechaEvento">
+            <th mat-header-cell *matHeaderCellDef> Fecha Evento </th>
+            <td mat-cell *matCellDef="let element"> {{element.fechaEvento}} </td>
+          </ng-container>
+        <!--Options Column-->
+        <ng-container matColumnDef="options">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element;">
+                <mat-icon  class="mat-icon-edit" aria-hidden="false" aria-label="Example home icon" (click)="openEditDialog(element)" role="button">edit</mat-icon>
+                <mat-icon  class="mat-icon-delete" aria-hidden="false" aria-label="Example home icon" (click)="delete(element)" role="button">delete</mat-icon>
+            </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>

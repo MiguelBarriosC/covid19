@@ -1,0 +1,88 @@
+@import "../shared/colors"
+
+@mixin itemList($color,$borderW,$borderType,$borderColor,$height,$size, $marginRight)
+    color: $color
+    border-bottom: $borderW $borderType $borderColor,
+    height: $height
+    .mat-icon
+        font-size: $size
+        margin-right: $marginRight
+
+.tool-bar
+    @media (min-width:600px)
+        top: 12vh
+    @media (min-width:700px)
+        top: 12vh
+        height: 14vh
+    @media (min-width:1024px)
+        top:9vh
+        height: 8vh
+    @media (min-width:1300px)
+        display: none 
+    height:10vh
+    width: 100%
+    background-color: $principal
+    position: fixed
+    top: 9vh
+    left: 0
+    display: flex
+    gap: 10px
+    justify-content: flex-start
+    align-items: center
+    .tool-bar-icon
+        color: $icons-text
+        background-color: transparent
+    span
+        color: $icons-text
+.content
+    @media (min-width:600px)
+        height: 78vh
+    @media (min-width:700px)
+        height: 76vh
+    @media (min-width:1024px)
+        height: 83vh
+    @media (min-width:1300px)
+        height: 91vh
+        width: 84%
+        left: 16%
+    height: 81vh
+    width: 100%
+    position: fixed
+    bottom:0
+    left: 0
+    mat-drawer
+        @media (min-width:700px)
+            width:30%
+        background-color: $principal
+        width: 45%
+        mat-list
+            padding:0
+            mat-list-item
+                @include itemList($icons-text,1px,solid,$icons-text,60px,27px,20px)
+            mat-list-item:hover
+                background: $background-transparent-white
+    mat-drawer-content 
+        padding: 15px
+        background-color: $main-content
+        @media (min-width:1300px)
+            padding: 15px 60px
+.normal-mat-list
+    mat-list-item:hover
+        background: $background-transparent-white
+    @media (max-width:1299px)
+        display: none
+    @media (min-width:1300px)
+        background-color: $principal
+        width:16%
+        position: fixed
+        bottom: 0
+        top: 9vh
+        padding:0
+        mat-list-item
+            @include itemList($icons-text,1px,solid,$icons-text,60px,38px,20px)
+.active
+    background-color: $background-transparent-white
+            
+                
+
+
